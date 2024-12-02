@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at bottom, #1a1a1a, #000000);
+    color: orange;
+    font-family: 'Creepster', cursive, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 0.5em 0;
+    color: #ff7518;
+    text-shadow: 3px 3px 5px black;
+}
+
+p {
+    font-size: 1.5em;
+    color: #ffa500;
+    text-shadow: 2px 2px 4px black;
+}
+
+#batCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Luna */
+.moon {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+    width: 150px;
+    height: 150px;
+    background: #f5f5dc;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Calabazas */
+.pumpkins {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.pumpkin {
+    width: 80px;
+    height: 80px;
+    background: orange;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset -10px -10px 0px #d35400;
+}
+
+.pumpkin:before, .pumpkin:after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: orange;
+    border-radius: 50%;
+}
+
+.pumpkin:before {
+    left: -40px;
+}
+
+.pumpkin:after {
+    left: 40px;
+}
+
+.pumpkin.small {
+    width: 60px;
+    height: 60px;
+}
+
+.pumpkin::after, .pumpkin::before {
+    top: 5px;
+}
+
